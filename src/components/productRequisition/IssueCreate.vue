@@ -4,7 +4,7 @@
       <div class="card">
         <div class="card-body p-9">
           <div class="table-responsive">
-            <FieldArray name="products">
+            <FieldArray name="product_stocks">
               <table class="table table-row-bordered table-row-gray-300 gy-7">
                 <thead>
                 <tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase gs-0 justify-content-end">
@@ -52,7 +52,7 @@
                           <td></td>
                           <td></td>
                           <td class="text-gray-600">
-                            <input type="text" class="form-control form-control-sm" :name="'requested_amount_' + product_requisition_item.id" :id="'requested_amount_' + product_requisition_item.id" v-model="product_requisition_item.requested_amount">
+                            <input disabled type="text" class="form-control form-control-sm" :name="'requested_amount_' + product_requisition_item.id" :id="'requested_amount_' + product_requisition_item.id" v-model="product_requisition_item.requested_amount">
                           </td>
                         </tr>
                         </tbody>
@@ -124,14 +124,14 @@ export default defineComponent({
     });
 
     const save = async () => {
-      btnLoading.value = true
-      await store.dispatch(Actions.PRODUCT_REQUISITION_ISSUE_STORE, {product_requisition: product_requisition.value}).then(async () => {
-        btnLoading.value = false;
-         router.push({name: "productRequisitionsIssues"});
-
-      }).catch(() => {
-        btnLoading.value = false;
-      })
+      // btnLoading.value = true
+      // await store.dispatch(Actions.PRODUCT_REQUISITION_ISSUE_STORE, {product_requisition: product_requisition.value}).then(async () => {
+      //   btnLoading.value = false;
+      //    router.push({name: "productRequisitionsIssues"});
+      //
+      // }).catch(() => {
+      //   btnLoading.value = false;
+      // })
     };
 
 

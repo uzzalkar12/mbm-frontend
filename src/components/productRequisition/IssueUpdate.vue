@@ -52,7 +52,7 @@
                           <td></td>
                           <td></td>
                           <td class="text-gray-600">
-                            <input type="text" class="form-control form-control-sm" :name="'requested_amount_' + product_requisition_item.id" :id="'requested_amount_' + product_requisition_item.id" v-model="product_requisition_item.requested_amount">
+                            <input disabled type="text" class="form-control form-control-sm" :name="'requested_amount_' + product_requisition_item.id" :id="'requested_amount_' + product_requisition_item.id" v-model="product_requisition_item.requested_amount">
                           </td>
                         </tr>
                         </tbody>
