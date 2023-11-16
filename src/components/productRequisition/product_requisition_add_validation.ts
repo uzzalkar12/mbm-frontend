@@ -7,7 +7,7 @@ const productSchema =  Yup.object().shape({
 });
 
 const productRequisitionAddValidation = Yup.object().shape({
-    product_stocks: Yup.array().of(productSchema).min(1)
+    //product_stocks: Yup.array().of(productSchema).min(1)
 })
 
 export default productRequisitionAddValidation

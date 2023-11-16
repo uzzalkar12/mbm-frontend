@@ -9,6 +9,7 @@ import store from "./store";
 import ElementPlus from "element-plus";
 import i18n from "@/core/plugins/i18n";
 import Toast, { PluginOptions, POSITION } from "vue-toastification";
+import "vue-toastification/dist/index.css";
 
 import Datepicker from '@vuepic/vue-datepicker';
 import '@vuepic/vue-datepicker/dist/main.css'

@@ -124,14 +124,14 @@ export default defineComponent({
     });
 
     const save = async () => {
-      // btnLoading.value = true
-      // await store.dispatch(Actions.PRODUCT_REQUISITION_ISSUE_STORE, {product_requisition: product_requisition.value}).then(async () => {
-      //   btnLoading.value = false;
-      //    router.push({name: "productRequisitionsIssues"});
-      //
-      // }).catch(() => {
-      //   btnLoading.value = false;
-      // })
+      btnLoading.value = true
+      await store.dispatch(Actions.PRODUCT_REQUISITION_ISSUE_STORE, {product_requisition: product_requisition.value}).then(async () => {
+        btnLoading.value = false;
+         router.push({name: "productRequisitionsIssues"});
+
+      }).catch(() => {
+        btnLoading.value = false;
+      })
     };
 
 
